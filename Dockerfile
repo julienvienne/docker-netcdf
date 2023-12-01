@@ -39,7 +39,7 @@ RUN tar zxvf  eccodes-2.32.1-Source.tar.gz && \
     mkdir build && cd build  && \
     cmake .. && \
     make -j4 && make install && \
-    cd .. && \
+    cd / && \
     rm -rf  /eccodes-2.32.1-Source.tar.gz /eccodes-2.32.1-Source \
 
 # Build CDO
@@ -51,7 +51,7 @@ RUN tar zxvf  cdo-2.3.0.tar.gz && \
         --prefix=/usr/local && \
    make -j4 && make install && \
    cd .. && \
-   rm -rf  /cdo-2.3.0.tar.gz /cdo-2.3.0
+   rm -rf /cdo-2.3.0.tar.gz /cdo-2.3.0
 
 # Refresh lib links
 RUN /sbin/ldconfig
