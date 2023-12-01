@@ -40,17 +40,17 @@ RUN tar zxvf  eccodes-2.32.1-Source.tar.gz && \
     cmake .. && \
     make -j4 && make install && \
     cd / && \
-    rm -rf  /eccodes-2.32.1-Source.tar.gz /eccodes-2.32.1-Source \
+    rm -rf  /eccodes-2.32.1-Source.tar.gz /eccodes-2.32.1-Source 
 
 # Build CDO
 COPY cdo-2.3.0.tar.gz cdo-2.3.0.tar.gz
-RUN tar zxvf  cdo-2.3.0.tar.gz && \
+RUN tar zxvf cdo-2.3.0.tar.gz && \
     cd cdo-2.3.0 && \
         ./configure  --with-eccodes --with-netcdf=/usr/local \
         --with-hdf5=/usr/local --enable-netcdf4 --enable-hdf5 \
         --prefix=/usr/local && \
    make -j4 && make install && \
-   cd .. && \
+   cd / && \
    rm -rf /cdo-2.3.0.tar.gz /cdo-2.3.0
 
 # Refresh lib links
