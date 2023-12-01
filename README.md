@@ -1,7 +1,7 @@
 Ubuntu based image with the following tools installed :
 - NetCDF C library built HDF5 support
-- CDO : climate operator command line tools
 - eccodes : ECMWF library
+- CDO : climate operator command line tools with NetCDF, GRIB1 and GRIB2 support
 
 Build :
 ```bash
